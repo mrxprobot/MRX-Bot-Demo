@@ -1,0 +1,15 @@
+MRX Bot — Terms & Disclaimer (Short)
+====================================
+1) Educational Only
+MRX Bot products are strictly educational simulators. They do not perform real trades or operate on customer funds.
+
+2) No Financial Advice
+Content provided by MRX Bot is for information and training only. It is not financial advice.
+
+3) No Guarantees
+MRX Bot does not guarantee profits. Simulations are illustrative and past performance is not indicative of future results.
+
+4) API Keys & Security
+Do not share API keys with withdraw permissions. MRX Bot demos require no API keys. If a customer requests integration help, instruct them to use testnet or restricted keys.
+
+Contact: sales@mrxbot.example

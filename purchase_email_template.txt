@@ -1,0 +1,31 @@
+Subject: MRX Bot Demo — Access Link & Next Steps
+
+Hello {name},
+
+Thanks for your interest in MRX Bot.
+
+You can access the demo dashboard here:
+Demo URL: https://demo.mrxbot.site  (replace with your hosted link)
+
+What the demo shows:
+- Live market prices (display only)
+- Simulated Buy / Sell / Hold signals
+- Recent simulated trades and 7-day simulated PnL
+- Educational only — no real trades are placed
+
+If you buy the full MRX Bot package, you'll receive:
+- MRX Bot (Basic) or MRX Pro (Advanced) downloadable package
+- Installation guide (README) and user manual
+- Lifetime license key and activation instructions
+- Optional setup service (paid) for a guided session
+
+How to purchase:
+- Visit: https://mrxbot.site/shop  (replace with your shop link)
+- Or reply to this email and we will provide a secure payment link.
+
+Important note:
+MRX Bot is an educational simulator. It does NOT access or control funds. Users should never share API keys with withdraw permission.
+
+Best regards,
+MRX Sales Team
+sales@mrxbot.example

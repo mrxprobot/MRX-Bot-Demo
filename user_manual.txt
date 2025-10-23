@@ -1,0 +1,25 @@
+MRX Bot — User Manual (Educational Simulator)
+=============================================
+
+Welcome to MRX Bot simulator. This package is designed for learning and testing trading strategies using real market prices without executing live trades.
+
+What's included:
+- Demo website (demo_dashboard.html)
+- Simulated dashboard showing signals and trades
+- README and purchase templates
+- Terms & Disclaimer
+
+How to use the demo:
+1. Open demo_dashboard.html in a modern browser.
+2. The page simulates live signals. Observe the "Current Signal" and "Recent simulated trades".
+3. Use the Strategy Summary to understand how the simulation generates Buy/Sell/Hold events.
+
+Purchasing the full package:
+- The full package (MRX Bot or MRX Pro) includes downloadable software for offline simulation, advanced charts, and PDF documentation.
+- After purchase you will receive an activation key and a ZIP with the simulation package and instructions.
+
+Support:
+- For guided demos or installation services, contact sales@mrxbot.example
+
+Legal disclaimer:
+MRX Bot is an educational tool only. It does not perform real trading or handle funds. Users are responsible for their own investment decisions.

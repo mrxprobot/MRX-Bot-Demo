@@ -1,0 +1,21 @@
+MRX Bot — TikTok Content Plan (7 posts / 2 weeks)
+1) Post 1 — What is MRX Bot? (30s)
+   - Quick intro, "Demo only — learn trading strategies", show dashboard clip.
+
+2) Post 2 — EMA Crossover explained (45s)
+   - Short educational animation + demo signal.
+
+3) Post 3 — Why use a simulator? (30s)
+   - Risk examples; mention "No real funds".
+
+4) Post 4 — MRX Pro features (45s)
+   - Show customization, strategy builder mockup.
+
+5) Post 5 — Customer testimonial (script)
+   - Script for user to record a positive demo experience.
+
+6) Post 6 — How to request a guided demo (30s)
+   - Call to action: "DM for demo link".
+
+7) Post 7 — FAQ quick answers (30s)
+   - Address top 3 buyer concerns: real trading? refunds? security?

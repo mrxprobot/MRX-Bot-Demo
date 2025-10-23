@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>MRX Bot — Demo Dashboard</title>
+<style>
+body{font-family:Inter,Arial,Helvetica,sans-serif;background:#041226;color:#e3f0ff;margin:0;padding:0}
+.header{padding:18px;text-align:center;background:#072036}
+.container{max-width:1100px;margin:20px auto;padding:18px}
+.grid{display:grid;grid-template-columns:2fr 1fr;gap:16px}
+.card{background:#081526;padding:16px;border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,0.5)}
+.huge{font-size:28px;margin:8px 0}
+.small{color:#9fb3d1;font-size:13px}
+.signal-buy{color:#9be89b;font-weight:700}
+.signal-sell{color:#ff9b9b;font-weight:700}
+.table{width:100%;border-collapse:collapse;margin-top:8px}
+.table th, .table td{padding:8px;border-bottom:1px solid rgba(255,255,255,0.04);text-align:left}
+.footer{padding:12px;text-align:center;color:#6f869e;font-size:13px}
+</style>
+</head>
+<body>
+<div class="header">
+  <h2>MRX Bot — Live Demo Dashboard</h2>
+  <div class="small">Demo Mode — No real trading. Simulation only.</div>
+</div>
+
+<div class="container">
+  <div class="grid">
+    <div>
+      <div class="card">
+        <div class="huge" id="pair">BTC/USDT</div>
+        <div class="small">Price <span id="price">—</span> • 24h Change <span id="change">—</span></div>
+        <div style="margin-top:12px">
+          <div class="small">Current Signal: <span id="signal" class="signal-buy">—</span></div>
+          <div style="margin-top:12px" class="small">Simulated PnL (7d): <strong id="pnl">—</strong></div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:12px">
+        <h4 class="small">Recent simulated trades</h4>
+        <table class="table" id="trades">
+          <thead><tr><th>Time</th><th>Type</th><th>Price</th><th>Size</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div>
+      <div class="card">
+        <h4 class="small">Strategy Summary</h4>
+        <ul class="small">
+          <li>EMA(10) / EMA(50) crossover</li>
+          <li>RSI filter: avoid signals when RSI &gt; 70 or &lt; 30</li>
+          <li>Position sizing: simulated fixed 0.01 BTC per trade</li>
+        </ul>
+      </div>
+
+      <div class="card" style="margin-top:12px">
+        <h4 class="small">How demo works</h4>
+        <p class="small">The dashboard uses recent price ticks to simulate signals. It is for training & research — not for live trading.</p>
+        <p class="small">Want a guided demo? Contact: <em>sales@mrxbot.example</em></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">MRX Bot — Demo • Educational Only</div>
+
+<script>
+// Simple simulated data generator (client-side)
+function rand(min,max){return Math.random()*(max-min)+min}
+let price = 61000 + rand(-200,200)
+document.getElementById('price').innerText = price.toFixed(2)
+document.getElementById('change').innerText = (rand(-3,3)).toFixed(2) + '%'
+
+const tradesBody = document.querySelector('#trades tbody')
+function addTrade(type, price){
+  const tr = document.createElement('tr')
+  const time = new Date().toLocaleTimeString()
+  tr.innerHTML = `<td>${time}</td><td>${type}</td><td>${price.toFixed(2)}</td><td>0.01</td>`
+  tradesBody.insertBefore(tr, tradesBody.firstChild)
+  if(tradesBody.childElementCount>8) tradesBody.removeChild(tradesBody.lastChild)
+}
+
+function simulate(){
+  // adjust price slightly
+  price += rand(-150,150)
+  document.getElementById('price').innerText = price.toFixed(2)
+  // fake EMA crossover signal logic
+  const s = Math.sin(Date.now()/60000) // pseudo-cycle
+  const signal = s>0.1 ? 'BUY' : (s<-0.1 ? 'SELL' : 'HOLD')
+  const elSig = document.getElementById('signal')
+  elSig.className = signal==='BUY' ? 'signal-buy' : (signal==='SELL'?'signal-sell':'')
+  elSig.innerText = signal
+  // random trade event when buy or sell
+  if(signal==='BUY' && Math.random()>0.6) addTrade('BUY', price)
+  if(signal==='SELL' && Math.random()>0.6) addTrade('SELL', price)
+  // update simulated pnl
+  let pnl = (Math.random()*2 - 0.5).toFixed(2) + '%'
+  document.getElementById('pnl').innerText = pnl
+}
+
+setInterval(simulate, 3500)
+simulate()
+</script>
+</body>
+</html>
